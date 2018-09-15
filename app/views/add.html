@@ -1,0 +1,17 @@
+<div class="todo-wrapper ngAnimate" ng-controller="addController">
+  <div class="todo-title clearfix">
+    <h3><span class="btn-back" ng-click="goBack()"></span>New To-Do Task</h3>
+  </div>
+  <hr>
+  <form ng-submit="submit()">
+    <div class="form-group">
+      <div class="row">
+        <input tabindex="0" id="jsInput" type="text" name="" value="" ng-model="newTaskLabel">
+      </div>
+      <div class="align-right">
+        <button type="submit" class="btn btn-rounded">Save Task</button>
+      </div>
+    </div>
+  </form>
+
+</div>

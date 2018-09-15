@@ -1,0 +1,11 @@
+.form-group{
+  input{
+    border: 1px solid lighten($gray, 50%);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: $gray;
+    display: block;
+    width: 100%;
+  }
+}

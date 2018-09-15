@@ -1,0 +1,36 @@
+.align-center{
+  text-align: center;
+}
+.align-left{
+  text-align: left;
+}
+.align-right{
+  text-align: right;
+}
+.row{
+  padding: 12px 0;
+}
+.align-justify{
+  -moz-text-align-last: justify;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+.clearfix{
+  position: relative;
+  overflow: auto;
+  &:after{
+    content:"";
+    display: block;
+    clear: both;
+  }
+}
+.inline-block-middle{
+  display: inline-block;
+  vertical-align: middle;
+}

@@ -1,0 +1,100 @@
+@import "reset";
+@import "helper";
+@import "vars";
+@import "button";
+@import "input";
+@import "animation";
+
+
+.todo-wrapper{
+  background:white;
+  padding: 20px 30px 50px;
+  width: 90%;
+  margin: auto;
+  max-width: 500px;
+  color: $gray;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  z-index: 0;
+
+  .todo-title{
+    text-transform: uppercase;
+    -moz-text-align-last: justify;
+    -moz-text-align-last: justify;
+    text-align: justify;
+    & > div{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    p{
+      span{
+        display: block;
+        font-size: 0.7em;
+        &:first-child{
+          font-weight: bold;
+        }
+      }
+    }
+
+    .date{
+      white-space: nowrap;
+      h2{
+        font-size: 1.8em;
+      }
+      h2,p{
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    .day{
+      p{
+        font-size: 0.75em;
+      }
+    }
+  }
+
+  /* list */
+  ul{
+    li{
+      label{
+        display: block;
+        padding: 15px 0;
+        position: relative;
+
+        input{
+          position: absolute;
+          top: 0;
+          right:0;
+          width: 0;
+          height: 0;
+          border: 0;
+          background: transparent;
+
+          &:checked ~ p{
+            text-decoration: line-through;
+            color: lighten($gray, 20%);
+            &:after{
+              border-color: $green;
+            }
+          }
+        }
+        p{
+          padding-right:20px;
+          color: $gray;
+          &:after{
+            content:"";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 1em;
+            height: 1em;
+            border: 3px solid lighten($gray, 50%);
+            border-radius: 100%;
+            margin:auto;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,251 @@
+html, body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background: #f0efe9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2, p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  display: block;
+}
+
+hr {
+  border-bottom: 0;
+  border-top: 1px solid whitesmoke;
+  margin: 16px 0;
+}
+
+button:focus, button:active, a:focus, a:active, input:focus, input:active, li:focus, li:active {
+  outline: 0;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.row {
+  padding: 12px 0;
+}
+
+.align-justify {
+  -moz-text-align-last: justify;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  position: relative;
+  overflow: auto;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.inline-block-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn {
+  color: white;
+  text-align: center;
+  border-radius: 100%;
+  background: #3ee09b;
+  border: 0;
+  cursor: pointer;
+  transition: 0.1s ease background, 0.1s ease transform;
+}
+.btn:hover {
+  background: #21ca82;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn.btn-circle {
+  font-weight: bold;
+  font-size: 2em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+}
+.btn.btn-circle:active {
+  transform: translate(-50%, 51%);
+}
+.btn.btn-rounded {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.btn-back {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  margin-right: 5px;
+  transition: 0.1s ease transform;
+  cursor: pointer;
+}
+.btn-back:hover {
+  border-radius: 3px;
+  transform: translateX(-5%);
+}
+.btn-back:before {
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: block;
+  position: absolute;
+  border-left: 2px solid #5b5e6e;
+  border-bottom: 2px solid #5b5e6e;
+  transform: translate(-25%, -50%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+}
+
+.form-group input {
+  border: 1px solid #e1e2e7;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px 20px;
+  color: #5b5e6e;
+  display: block;
+  width: 100%;
+}
+
+.todo-wrapper {
+  transition: 0.2s ease-in-out all;
+}
+.ng-enter .todo-wrapper {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.ng-enter-active .todo-wrapper {
+  opacity: 1;
+  transform: translateX(0);
+}
+.ng-leave-active .todo-wrapper {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.todo-wrapper {
+  background: white;
+  padding: 20px 30px 50px;
+  width: 90%;
+  margin: auto;
+  max-width: 500px;
+  color: #5b5e6e;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  z-index: 0;
+  /* list */
+}
+.todo-wrapper .todo-title {
+  text-transform: uppercase;
+  -moz-text-align-last: justify;
+  -moz-text-align-last: justify;
+  text-align: justify;
+}
+.todo-wrapper .todo-title > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.todo-wrapper .todo-title p span {
+  display: block;
+  font-size: 0.7em;
+}
+.todo-wrapper .todo-title p span:first-child {
+  font-weight: bold;
+}
+.todo-wrapper .todo-title .date {
+  white-space: nowrap;
+}
+.todo-wrapper .todo-title .date h2 {
+  font-size: 1.8em;
+}
+.todo-wrapper .todo-title .date h2, .todo-wrapper .todo-title .date p {
+  display: inline-block;
+  vertical-align: middle;
+}
+.todo-wrapper .todo-title .day p {
+  font-size: 0.75em;
+}
+.todo-wrapper ul li label {
+  display: block;
+  padding: 15px 0;
+  position: relative;
+}
+.todo-wrapper ul li label input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 0;
+  background: transparent;
+}
+.todo-wrapper ul li label input:checked ~ p {
+  text-decoration: line-through;
+  color: #8e91a1;
+}
+.todo-wrapper ul li label input:checked ~ p:after {
+  border-color: #3ee09b;
+}
+.todo-wrapper ul li label p {
+  padding-right: 20px;
+  color: #5b5e6e;
+}
+.todo-wrapper ul li label p:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1em;
+  height: 1em;
+  border: 3px solid #e1e2e7;
+  border-radius: 100%;
+  margin: auto;
+}
+
+/*# sourceMappingURL=todo.css.map */

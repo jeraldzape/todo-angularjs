@@ -1,0 +1,17 @@
+
+  .todo-wrapper{
+    transition: 0.2s ease-in-out all;
+
+    .ng-enter &{
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    .ng-enter-active &{
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .ng-leave-active &{
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  }
